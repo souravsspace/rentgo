@@ -49,8 +49,8 @@ export default function Header() {
                 <Option>Luxury</Option>
               </Select>
               <div className="grid gap-2">
-                <Input label="From" type="date" crossOrigin={undefined} />
-                <Input label="To" type="date" crossOrigin={undefined} />
+                <Input label="From" type="date" placeholder="insert date" crossOrigin={undefined} />
+                <Input label="To" type="date" placeholder="insert date" crossOrigin={undefined} />
               </div>
               <Button type="submit" fullWidth>
                 Search

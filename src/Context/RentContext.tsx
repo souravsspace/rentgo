@@ -4,7 +4,10 @@ type RentContextProviderProps = {
   children: React.ReactNode;
 }
 
-const RentContext = createContext({})
+type RentContextProps = {
+}
+
+const RentContext = createContext({} as RentContextProps)
 
 export const useRentContext = () => useContext(RentContext)
 
