@@ -15,7 +15,7 @@ export default function Header() {
   const country = Country.getAllCountries();
 
   return (
-    <header className="h-screen bg-[url('./src/assets/backgroundIMG.jpeg')] text-white bg-cover bg-center ">
+    <header header-bg="true" className="h-screen text-white bg-cover bg-center ">
       <div className="space-y-16 w-full flex justify-between items-center lg:space-y-32 py-2 md:py-6 px-2 md:px-8 lg:px-[3rem] xl:px-[8rem] h-full">
         <Card className="w-full max-w-[40rem] flex-row mx-auto lg:mx-0">
           <CardHeader
