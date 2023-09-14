@@ -11,11 +11,9 @@ import {
 import logo from "../assets/logo.svg";
 import carCardImg from "../assets/car_card.png";
 import { Country } from "country-state-city";
-import { useState } from "react";
 
 export default function Header() {
   const country = Country.getAllCountries();
-  // const [country, setCountry] = useState(countries);
 
   return (
     <header className="h-screen bg-bg-image text-white bg-cover bg-center ">
