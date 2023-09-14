@@ -15,6 +15,8 @@ import {
   faGasPump,
 } from "@fortawesome/free-solid-svg-icons";
 
+import Images from "../assets/Images";
+
 import formatCurrency from "../Utilities/FormatCurrency";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -51,7 +53,6 @@ export function CarsCard() {
                   drag="x"
                   dragConstraints={{ right: 0, left: -width }}
                   className="flex items-center gap-5 my-2 mx-auto"
-                  // className="grid grid-cols-3 gap-5"
                 >
                   {carDetail.carData.map((car, index) => {
                     return (
@@ -63,7 +64,16 @@ export function CarsCard() {
                             color="transparent"
                             className="m-0 rounded-none"
                           >
-                            <img src={car.img} alt={car.name} />
+                            {Images.map(
+                              (img) =>
+                                img.id - 1 === index && (
+                                  <img
+                                    key={img.id - 1}
+                                    src={img.src}
+                                    alt={car.name}
+                                  />
+                                )
+                            )}
                           </CardHeader>
                           <CardBody>
                             <Typography variant="h4">{car.name}</Typography>
