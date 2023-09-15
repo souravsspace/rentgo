@@ -1,13 +1,8 @@
 import CarData from "../../Data/CarData.json";
-import { Card, CardHeader, Typography } from "@material-tailwind/react";
+import { Button, Card, CardFooter, CardHeader, Typography } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import CarBody from "./CarBody";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
 import formatCurrency from "../../Utilities/FormatCurrency";
 
 export function CarsCard() {
@@ -35,14 +30,14 @@ export function CarsCard() {
                     ( Starts at {formatCurrency(carDetails.priceStarts)}/Day)
                   </Typography>
                 </div>
-                <div className="flex gap-1 items-center">
+                {/* <div className="flex gap-1 items-center">
                   <div className="bg-gray-200 hover:bg-black hover:text-white text-gray-600 cursor-pointer px-2 py-1 rounded">
                     <FontAwesomeIcon icon={faChevronLeft} />
                   </div>
                   <div className="bg-gray-200 hover:bg-black hover:text-white text-gray-600 cursor-pointer px-2 py-1 rounded">
                     <FontAwesomeIcon icon={faChevronRight} />
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className=" overflow-x-hidden ">
                 <motion.div
@@ -61,7 +56,7 @@ export function CarsCard() {
                             shadow={false}
                             color="transparent"
                             className="m-0 rounded-none"
-                          > 
+                          >
                             <img
                               src={car.img}
                               alt={car.name}
@@ -69,6 +64,12 @@ export function CarsCard() {
                             />
                           </CardHeader>
                           <CarBody {...car} />
+                          <CardFooter className="flex items-center justify-between">
+                            <Typography variant="h5">
+                              {formatCurrency(car.rentPrice)}/Day
+                            </Typography>
+                            <Button type="button">Rent Now</Button>
+                          </CardFooter>
                         </Card>
                       </div>
                     );

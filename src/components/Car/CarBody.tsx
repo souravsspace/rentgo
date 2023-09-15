@@ -7,12 +7,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  Button,
   CardBody,
-  CardFooter,
   Typography,
 } from "@material-tailwind/react";
-import formatCurrency from "../../Utilities/FormatCurrency";
 
 type carProps = {
   name: string;
@@ -26,7 +23,6 @@ type carProps = {
 
 export default function CarBody(car: carProps) {
   return (
-    <>
       <CardBody>
         <Typography variant="h4">{car.name}</Typography>
         <Typography>{car.year}</Typography>
@@ -63,12 +59,5 @@ export default function CarBody(car: carProps) {
           </div>
         </div>
       </CardBody>
-      <CardFooter className="flex items-center justify-between">
-        <Typography variant="h5">
-          {formatCurrency(car.rentPrice)}/Day
-        </Typography>
-        <Button type="button">Rent Now</Button>
-      </CardFooter>
-    </>
   );
 }

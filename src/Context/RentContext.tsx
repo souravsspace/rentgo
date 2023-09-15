@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 type RentContextProviderProps = {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }
 
 type RentContextProps = {
