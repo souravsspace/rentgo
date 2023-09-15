@@ -1,6 +1,6 @@
-import AfterHeader from "../components/AfterHeader";
-import { CarsCard } from "../components/CarsCard";
-import Header from "../components/Header";
+import AfterHeader from "../components/Header/AfterHeader";
+import { CarsCard } from "../components/Car/CarCard";
+import Header from "../components/Header/Header";
 
 export default function Home() {
   return (

@@ -8,7 +8,7 @@ import {
   Option,
   Input,
 } from "@material-tailwind/react";
-import carCardImg from "../assets/car_card.png";
+import carCardImg from "../../assets/car_card.png";
 import { Country } from "country-state-city";
 
 export default function Header() {
