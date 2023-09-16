@@ -1,6 +1,5 @@
 import {
   Button,
-  ButtonGroup,
   Card,
   CardBody,
   CardFooter,
@@ -18,7 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 type carDataProps = {
-  id: number;
+  // id: number;
   rent: number;
   name: string;
   year: number;
@@ -30,7 +29,7 @@ type carDataProps = {
 };
 
 export default function Items({
-  id,
+  // id,
   img,
   name,
   rent,

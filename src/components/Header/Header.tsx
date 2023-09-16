@@ -15,7 +15,7 @@ export default function Header() {
   const [dateFirst, setDateFirst] = useState<string>();
   const [dateSecond, setDateSecond] = useState<string>();
   const [vehicle, setVehicle] = useState<string>();
-  const [location, setLocation] = useState<string>();z
+  const [location, setLocation] = useState<string>();
 
   const vehicleClassOption = [
     { id: 1, option: "Economy" },
@@ -24,8 +24,8 @@ export default function Header() {
     { id: 4, option: "Luxury" },
   ];
 
-  console.log(vehicle);
-  console.log(location);
+  console.log(vehicle, location);
+  console.log(dateFirst, dateSecond);
 
   return (
     <header
