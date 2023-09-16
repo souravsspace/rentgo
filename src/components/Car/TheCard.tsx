@@ -15,7 +15,7 @@ export function TheCard() {
 
   return (
     <main className="pt-32 bg-blue-gray-50/50">
-      <Typography variant="h1" className="text-center">
+      <Typography variant="h1" className="text-center md:mb-[5rem]">
         Get Our Rental Cars
       </Typography>
       <div className="py-2 md:py-6 px-2 md:px-8 lg:px-[3rem] xl:px-[8rem] h-full">
@@ -37,7 +37,7 @@ export function TheCard() {
                   <motion.div
                     drag="x"
                     dragConstraints={{ right: 0, left: -width }}
-                    className="flex gap-2"
+                    className="flex gap-x-5"
                   >
                     {carDetails.carData.map((car) => (
                       <Items key={car.id} {...car} />

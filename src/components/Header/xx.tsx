@@ -3,19 +3,21 @@ import {
   CardBody,
   Typography,
   Button,
+  Select,
+  Option,
   Input,
 } from "@material-tailwind/react";
 import { useRentContext } from "../../Context/RentContext";
 import locationOption from "../../Data/locationOp.json";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 export default function Header() {
   const { formSubmit } = useRentContext();
 
-  const [dateFirst, setDateFirst] = useState<string>();
-  const [dateSecond, setDateSecond] = useState<string>();
-  const [vehicle, setVehicle] = useState<string>();
-  const [location, setLocation] = useState<string>();z
+  const [dateFirst, setDateFirst] = useState<string | null>(null);
+  const [dateSecond, setDateSecond] = useState<string | null>(null);
+  const [vehicle, setVehicle] = useState<string | null>(null);
+  const [location, setLocation] = useState<string | null>(null);
 
   const vehicleClassOption = [
     { id: 1, option: "Economy" },
@@ -23,9 +25,6 @@ export default function Header() {
     { id: 3, option: "Premium" },
     { id: 4, option: "Luxury" },
   ];
-
-  console.log(vehicle);
-  console.log(location);
 
   return (
     <header
@@ -59,37 +58,51 @@ export default function Header() {
                 crossOrigin={undefined}
                 onChange={(e) => setDateSecond(e.target.value)}
               />
-              <div className="border-[1px] py-[2px] border-[#B0BEC5] shadow-inner rounded-md">
-                <select
-                  className="bg-white w-full border-r-[14px] border-transparent py-2 px-4 text-sm rounded-md "
-                  onChange={(e) => setVehicle(e.target.value)}
-                >
-                  <option disabled selected hidden>
-                    Vehicle variant
-                  </option>
-                  <br />
-                  {vehicleClassOption.map((option) => (
-                    <option value={vehicle} key={option.id}>
-                      {option.option}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="border-[1px] py-[2px] border-[#B0BEC5] shadow-inner rounded-md">
-                <select
-                  className="bg-white w-full border-r-[14px] border-transparent py-2 px-4 text-sm rounded-md "
-                  onChange={(e) => setLocation(e.target.value)}
-                >
-                  <option disabled selected hidden>
-                    Location
-                  </option>
-                  {locationOption.map((option) => (
-                    <option value={location} key={option.id}>
-                      {option.option}
-                    </option>
-                  ))}
-                </select>
-              </div>
+              <Select
+                animate={{
+                  mount: { y: 0 },
+                  unmount: { y: 25 },
+                }}
+                label="Vehicle Class"
+                value={vehicle || " "}
+                selected={(element) => {
+                  if (element) {
+                    const selectedValue = element.props.name
+                    console.log("Selected Value:", selectedValue);
+                    setVehicle(element.props.name);
+                    return selectedValue;
+                  }
+                }}
+              >
+                {vehicleClassOption.map((option) => (
+                  <Option  key={option.id}>{option.option}</Option>
+                ))}
+              </Select>
+
+              {/* <Select
+                animate={{
+                  mount: { y: 0 },
+                  unmount: { y: 25 },
+                }}
+                label="Vehicle Class"
+                value={vehicle || " "}
+                onChange={(event) => setVehicle(event.currentTarget.value)}
+              >
+                {vehicleClassOption.map((option) => (
+                  <Option key={option.id}>{option.option}</Option>
+                ))}
+              </Select> */}
+              <Select
+                animate={{
+                  mount: { y: 0 },
+                  unmount: { y: 25 },
+                }}
+                label="Location"
+              >
+                {locationOption.map((option) => (
+                  <Option key={option.id}>{option.option}</Option>
+                ))}
+              </Select>
 
               <Button type="submit" fullWidth>
                 Search

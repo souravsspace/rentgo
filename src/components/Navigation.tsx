@@ -7,7 +7,7 @@ export function Navigation() {
   return (
     <Navbar
       shadow={false}
-      className="sticky top-0 mx-auto w-screen py-2 md:px-4 lg:px-8 z-50"
+      className="fixed top-0 mx-auto w-screen py-2 md:px-4 lg:px-8 z-50"
       fullWidth
     >
       <div className="flex items-center justify-between text-blue-gray-900">
@@ -26,7 +26,7 @@ export function Navigation() {
                 as="li"
                 key={index}
                 variant="small"
-                className="p-1 font-normal"
+                className="p-2 font-normal"
               >
                 <a href="#" className="flex items-center">
                   {item}
