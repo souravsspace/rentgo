@@ -1,28 +1,46 @@
 import {
   Button,
   Card,
+  CardBody,
   CardFooter,
   CardHeader,
   Typography,
 } from "@material-tailwind/react";
-import CardItemsBody from "./CardItemsBody";
 import formatCurrency from "../../Utilities/FormatCurrency";
-import Images from "../../assets/Images";
-import CarData from "../../Data/CarData.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBriefcase,
+  faCheck,
+  faDoorOpen,
+  faGasPump,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
-type CarItemsProps = {
+type carDataProps = {
   id: number;
-  img: string;
+  rent: number;
   name: string;
-  rentPrice: number;
+  year: number;
+  seats: number;
+  doors: number;
+  luggage: number;
+  mileage: string;
+  img: string;
 };
 
-export default function Items(
-  car: any,
-  { id, img, name, rentPrice }: CarItemsProps
-) {
+export default function Items({
+  id,
+  img,
+  name,
+  rent,
+  year,
+  seats,
+  doors,
+  luggage,
+  mileage,
+}: carDataProps) {
   return (
-    <div>
+    <div className="flex">
       <Card className="overflow-hidden mx-auto min-w-[23.5rem]">
         <CardHeader
           floated={false}
@@ -30,29 +48,46 @@ export default function Items(
           color="transparent"
           className="m-0 rounded-none"
         >
-          
-          {/* <img src={img} alt={name} className="w-full" /> */}
-          {/* {Images.find((images) => images.id === id) && (
-            <div>
-              {Images.map((image) => (
-                <img key={image.id} src={image.src} alt={name} />
-              ))}
-            </div>
-          )} */}
-          {/* {Images.map((image) => (
-            <div key={image.id}>
-              {image.id === id && <img src={image.src} alt={name} />}
-            </div>
-          ))} */}
-          {/* {Images.map((image) => (
-            <img key={image.id} src={image.src} alt={name} />
-          ))} */}
-
-
+          <img src={img} alt={name} />
         </CardHeader>
-        <CardItemsBody {...car} />
+        <CardBody>
+          <Typography variant="h4">{name}</Typography>
+          <Typography>{year}</Typography>
+          <Typography>
+            <span className="text-green-500">
+              <FontAwesomeIcon icon={faCheck} /> Free cancellation
+            </span>{" "}
+            <span className="text-xs">up to 48h before pick-up time</span>
+          </Typography>
+          <div className="flex justify-between items-center">
+            <div className="flex gap-1 items-center justify-center">
+              <Typography className="text-xl">
+                <FontAwesomeIcon icon={faUserCircle} />
+              </Typography>
+              <Typography className="text-xl">{seats}</Typography>
+            </div>
+            <div className="flex gap-1 items-center justify-center">
+              <Typography className="text-xl">
+                <FontAwesomeIcon icon={faDoorOpen} />
+              </Typography>
+              <Typography className="text-xl">{doors}</Typography>
+            </div>
+            <div className="flex gap-1 items-center justify-center">
+              <Typography className="text-xl">
+                <FontAwesomeIcon icon={faBriefcase} />
+              </Typography>
+              <Typography className="text-xl">{luggage}</Typography>
+            </div>
+            <div className="flex gap-1 items-center justify-center">
+              <Typography className="text-xl">
+                <FontAwesomeIcon icon={faGasPump} />
+              </Typography>
+              <Typography className="text-xl">{mileage}</Typography>
+            </div>
+          </div>
+        </CardBody>
         <CardFooter className="flex items-center justify-between">
-          <Typography variant="h5">{formatCurrency(rentPrice)}/Day</Typography>
+          <Typography variant="h5">{formatCurrency(rent)}/Day</Typography>
           <Button type="button">Rent Now</Button>
         </CardFooter>
       </Card>

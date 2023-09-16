@@ -5,10 +5,9 @@ import formatCurrency from "../../Utilities/FormatCurrency";
 import { Typography } from "@material-tailwind/react";
 import Items from "./Items";
 
-export function CardItems() {
+export function TheCard() {
   const [width, setwidth] = useState(0);
   const cardParent = useRef<any>();
-  const cardChild = useRef<any>();
 
   useEffect(() => {
     setwidth(cardParent.current?.scrollWidth - cardParent.current?.offsetWidth);
@@ -31,20 +30,19 @@ export function CardItems() {
               </div>
               <div className=" overflow-x-hidden ">
                 <motion.div
-                  drag="x"
-                  dragConstraints={{ right: 0, left: -width }}
                   ref={cardParent}
                   whileTap={{ cursor: "grabbing" }}
                   className="flex items-center gap-5 my-2 mx-auto"
                 >
-                  {carDetails.carData.map((car, index) => {
-                    return (
-                      <div key={index} ref={cardChild}>
-                        <img src={car.img} alt="" />
-                        <Items {...car} />
-                      </div>
-                    );
-                  })}
+                  <motion.div
+                    drag="x"
+                    dragConstraints={{ right: 0, left: -width }}
+                    className="flex gap-2"
+                  >
+                    {carDetails.carData.map((car) => (
+                      <Items key={car.id} {...car} />
+                    ))}
+                  </motion.div>
                 </motion.div>
               </div>
             </div>
