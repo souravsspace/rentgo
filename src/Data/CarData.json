@@ -4,7 +4,7 @@
     "priceStarts": 20,
     "carData": [
       {
-        "img": "src/assets/car-1.jpeg",
+        "img": "/assets/car-1.jpeg",
         "name": "Geely Vision GC7",
         "year": 2016,
         "seats": 5,
@@ -23,7 +23,7 @@
         "id": 1
       },
       {
-        "img": "src/assets/car-2.jpeg",
+        "img": "/assets/car-2.jpeg",
         "name": "Honda Accord Hybrid",
         "year": 2016,
         "seats": 5,
@@ -42,7 +42,7 @@
         "id": 2
       },
       {
-        "img": "src/assets/car-3.jpeg",
+        "img": "/assets/car-3.jpeg",
         "name": "Renault Megane Estate",
         "year": 2016,
         "seats": 5,
@@ -61,7 +61,7 @@
         "id": 3
       },
       {
-        "img": "src/assets/car-4.jpeg",
+        "img": "/assets/car-4.jpeg",
         "name": "Honda Accord Hybrid",
         "year": 2016,
         "seats": 5,
@@ -80,7 +80,7 @@
         "id": 4
       },
       {
-        "img": "src/assets/car-5.jpeg",
+        "img": "/assets/car-5.jpeg",
         "name": "Honda Accord Hybrid",
         "year": 2014,
         "seats": 5,
@@ -99,7 +99,7 @@
         "id": 5
       },
       {
-        "img": "src/assets/car-6.jpeg",
+        "img": "/assets/car-6.jpeg",
         "name": "Renault Duster",
         "year": 2017,
         "seats": 4,
@@ -118,7 +118,7 @@
         "id": 6
       },
       {
-        "img": "src/assets/car-7.jpeg",
+        "img": "/assets/car-7.jpeg",
         "name": "Renault Megane Estate",
         "year": 2018,
         "seats": 5,
@@ -137,7 +137,7 @@
         "id": 7
       },
       {
-        "img": "src/assets/car-8.jpeg",
+        "img": "/assets/car-8.jpeg",
         "name": "Ford Fiesta One",
         "year": 2016,
         "seats": 5,
@@ -156,7 +156,7 @@
         "id": 8
       },
       {
-        "img": "src/assets/car-9.jpeg",
+        "img": "/assets/car-9.jpeg",
         "name": "Honda Odyssey AB",
         "year": 2013,
         "seats": 5,
@@ -175,7 +175,7 @@
         "id": 9
       },
       {
-        "img": "src/assets/car-10.jpeg",
+        "img": "/assets/car-10.jpeg",
         "name": "Ford Fiesta One",
         "year": 2015,
         "seats": 5,
@@ -200,7 +200,7 @@
     "priceStarts": 30,
     "carData": [
       {
-        "img": "src/assets/car-11.jpeg",
+        "img": "/assets/car-11.jpeg",
         "name": "Toyota Corolla Fielder",
         "year": 2016,
         "seats": 5,
@@ -219,7 +219,7 @@
         "id": 11
       },
       {
-        "img": "src/assets/car-12.jpeg",
+        "img": "/assets/car-12.jpeg",
         "name": "MAZDA CX-5",
         "year": 2016,
         "seats": 5,
@@ -238,7 +238,7 @@
         "id": 12
       },
       {
-        "img": "src/assets/car-13.jpeg",
+        "img": "/assets/car-13.jpeg",
         "name": "Renault Megane Estate",
         "year": 2016,
         "seats": 5,
@@ -257,7 +257,7 @@
         "id": 13
       },
       {
-        "img": "src/assets/car-14.jpeg",
+        "img": "/assets/car-14.jpeg",
         "name": "Toyota Corolla Axio",
         "year": 2016,
         "seats": 5,
@@ -276,7 +276,7 @@
         "id": 14
       },
       {
-        "img": "src/assets/car-15.jpeg",
+        "img": "/assets/car-15.jpeg",
         "name": "Mitsubishi Lancer X",
         "year": 2014,
         "seats": 5,
@@ -295,7 +295,7 @@
         "id": 15
       },
       {
-        "img": "src/assets/car-16.jpeg",
+        "img": "/assets/car-16.jpeg",
         "name": "Renault Kangoo",
         "year": 2017,
         "seats": 4,
@@ -314,7 +314,7 @@
         "id": 16
       },
       {
-        "img": "src/assets/car-17.jpeg",
+        "img": "/assets/car-17.jpeg",
         "name": "Seat Alhambra",
         "year": 2018,
         "seats": 5,
@@ -333,7 +333,7 @@
         "id": 17
       },
       {
-        "img": "src/assets/car-18.jpeg",
+        "img": "/assets/car-18.jpeg",
         "name": "Citroen Berlingo",
         "year": 2016,
         "seats": 5,
@@ -352,7 +352,7 @@
         "id": 18
       },
       {
-        "img": "src/assets/car-19.jpeg",
+        "img": "/assets/car-19.jpeg",
         "name": "Geely CF98",
         "year": 2016,
         "seats": 5,
@@ -371,7 +371,7 @@
         "id": 19
       },
       {
-        "img": "src/assets/car-20.jpeg",
+        "img": "/assets/car-20.jpeg",
         "name": "Toyota Sienta",
         "year": 2015,
         "seats": 5,
@@ -396,7 +396,7 @@
     "priceStarts": 40,
     "carData": [
       {
-        "img": "src/assets/car-21.jpeg",
+        "img": "/assets/car-21.jpeg",
         "name": "Ford Mustang",
         "year": 2016,
         "seats": 5,
@@ -415,7 +415,7 @@
         "id": 21
       },
       {
-        "img": "src/assets/car-22.jpeg",
+        "img": "/assets/car-22.jpeg",
         "name": "Chevrolet Silverado",
         "year": 2016,
         "seats": 5,
@@ -434,7 +434,7 @@
         "id": 22
       },
       {
-        "img": "src/assets/car-23.jpeg",
+        "img": "/assets/car-23.jpeg",
         "name": "Toyota Camry",
         "year": 2016,
         "seats": 5,
@@ -453,7 +453,7 @@
         "id": 23
       },
       {
-        "img": "src/assets/car-24.jpeg",
+        "img": "/assets/car-24.jpeg",
         "name": "Honda Civic",
         "year": 2016,
         "seats": 5,
@@ -472,7 +472,7 @@
         "id": 24
       },
       {
-        "img": "src/assets/car-25.jpeg",
+        "img": "/assets/car-25.jpeg",
         "name": "Hyundai Sonata",
         "year": 2014,
         "seats": 5,
@@ -491,7 +491,7 @@
         "id": 25
       },
       {
-        "img": "src/assets/car-26.jpeg",
+        "img": "/assets/car-26.jpeg",
         "name": "Nissan Rogue",
         "year": 2017,
         "seats": 4,
@@ -510,7 +510,7 @@
         "id": 26
       },
       {
-        "img": "src/assets/car-27.jpeg",
+        "img": "/assets/car-27.jpeg",
         "name": "Kia Optima",
         "year": 2018,
         "seats": 5,
@@ -529,7 +529,7 @@
         "id": 27
       },
       {
-        "img": "src/assets/car-28.jpeg",
+        "img": "/assets/car-28.jpeg",
         "name": "Accord Hybrid",
         "year": 2016,
         "seats": 5,
@@ -548,7 +548,7 @@
         "id": 28
       },
       {
-        "img": "src/assets/car-29.jpeg",
+        "img": "/assets/car-29.jpeg",
         "name": "Mazda CX-5:",
         "year": 2016,
         "seats": 5,
@@ -567,7 +567,7 @@
         "id": 29
       },
       {
-        "img": "src/assets/car-30.jpeg",
+        "img": "/assets/car-30.jpeg",
         "name": "Subaru Impreza",
         "year": 2015,
         "seats": 5,
@@ -592,7 +592,7 @@
     "priceStarts": 300,
     "carData": [
       {
-        "img": "src/assets/car-31.jpeg",
+        "img": "/assets/car-31.jpeg",
         "name": "Rolls-Royce Phantom",
         "year": 2016,
         "seats": 5,
@@ -611,7 +611,7 @@
         "id": 31
       },
       {
-        "img": "src/assets/car-32.jpeg",
+        "img": "/assets/car-32.jpeg",
         "name": "Honda Accord Hybrid",
         "year": 2016,
         "seats": 5,
@@ -630,7 +630,7 @@
         "id": 32
       },
       {
-        "img": "src/assets/car-33.jpeg",
+        "img": "/assets/car-33.jpeg",
         "name": "Mercedes-Benz S-Class",
         "year": 2016,
         "seats": 5,
@@ -649,7 +649,7 @@
         "id": 33
       },
       {
-        "img": "src/assets/car-34.jpeg",
+        "img": "/assets/car-34.jpeg",
         "name": "BMW 7 Series",
         "year": 2016,
         "seats": 5,
@@ -668,7 +668,7 @@
         "id": 34
       },
       {
-        "img": "src/assets/car-35.jpeg",
+        "img": "/assets/car-35.jpeg",
         "name": "Audi A8",
         "year": 2014,
         "seats": 5,
@@ -687,7 +687,7 @@
         "id": 35
       },
       {
-        "img": "src/assets/car-36.jpeg",
+        "img": "/assets/car-36.jpeg",
         "name": "Lexus LS",
         "year": 2017,
         "seats": 4,
@@ -706,7 +706,7 @@
         "id": 36
       },
       {
-        "img": "src/assets/car-37.jpeg",
+        "img": "/assets/car-37.jpeg",
         "name": "Jaguar XJ:",
         "year": 2018,
         "seats": 5,
@@ -725,7 +725,7 @@
         "id": 37
       },
       {
-        "img": "src/assets/car-38.jpeg",
+        "img": "/assets/car-38.jpeg",
         "name": "Bentley Continental",
         "year": 2016,
         "seats": 5,
@@ -744,7 +744,7 @@
         "id": 38
       },
       {
-        "img": "src/assets/car-39.jpeg",
+        "img": "/assets/car-39.jpeg",
         "name": "Porsche Panamera",
         "year": 2016,
         "seats": 5,
@@ -763,7 +763,7 @@
         "id": 39
       },
       {
-        "img": "src/assets/car-40.jpeg",
+        "img": "/assets/car-40.jpeg",
         "name": "Tesla Model S",
         "year": 2023,
         "seats": 5,

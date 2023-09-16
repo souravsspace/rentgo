@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconButton, Typography } from "@material-tailwind/react";
-import logo from "../assets/logo.svg";
+import logo from "../../public/assets/logo.svg";
 
 export default function Footer() {
   const footerNavData = [

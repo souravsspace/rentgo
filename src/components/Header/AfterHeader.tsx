@@ -8,7 +8,7 @@ import { Typography } from "@material-tailwind/react";
 
 export default function AfterHeader() {
   return (
-    <div className="px-2 bg-white my-[5rem] md:px-8 lg:px-[3rem] xl:px-[8rem] grid gap-5 md:gap-[4rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div className="my-[5rem] grid grid-cols-1 gap-5 bg-white px-2 md:grid-cols-2 md:gap-[4rem] md:px-8 lg:grid-cols-3 lg:px-[3rem] xl:px-[8rem]">
       <section className="grid gap-4">
         <FontAwesomeIcon size="2xl" icon={faShieldHalved} />
         <Typography variant="h4">Car Insurance</Typography>

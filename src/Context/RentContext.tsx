@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 import { Navigation } from "../components/Navigation";
 import { useNavigate } from "react-router-dom";
 
@@ -7,8 +7,14 @@ type RentContextProviderProps = {
 };
 
 type RentContextProps = {
+    showCar: showCarType[];
+    getCarDetails: (id: number) => void;
     formSubmit: (e: React.FormEvent<HTMLFormElement>) => void
 };
+
+type showCarType = {
+    id: number;
+}
 
 const RentContext = createContext({} as RentContextProps);
 
@@ -17,7 +23,17 @@ export const useRentContext = () => useContext(RentContext);
 export default function RentContextProvider({
     children,
 }: RentContextProviderProps) {
+
     const navigate = useNavigate();
+    const [showCar, setShowCar] = useState<showCarType[]>([]);
+
+    function getCarDetails(id: number){
+        navigate("/overview-cars")
+        setShowCar((currItems) => {
+            if (currItems.find((item) => item.id === id) == null) return [ ...currItems, { id } ]
+            return currItems;
+        });
+    }   
 
     const formSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,7 +41,7 @@ export default function RentContextProvider({
     };
 
     return (
-    <RentContext.Provider value={{formSubmit}}>
+    <RentContext.Provider value={{formSubmit, showCar, getCarDetails}}>
         {children}
         <Navigation />
     </RentContext.Provider>
