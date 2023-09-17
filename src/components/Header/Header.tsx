@@ -4,36 +4,36 @@ import {
   Typography,
   Button,
   Input,
-} from "@material-tailwind/react";
-import { useRentContext } from "../../Context/RentContext";
-import locationOption from "../../Data/locationOp.json";
-import { useState } from "react";
+} from "@material-tailwind/react"
+import { useRentContext } from "../../Context/RentContext"
+import locationOption from "../../Data/locationOp.json"
+import { useState } from "react"
 
 export default function Header() {
-  const { formSubmit } = useRentContext();
+  const { formSubmit } = useRentContext()
 
-  const [dateFirst, setDateFirst] = useState<string>();
-  const [dateSecond, setDateSecond] = useState<string>();
+  const [dateFirst, setDateFirst] = useState<string>()
+  const [dateSecond, setDateSecond] = useState<string>()
 
-  console.log(dateFirst, dateSecond);
-  
-  const [vehicle, setVehicle] = useState<string>();
-  const [location, setLocation] = useState<string>();
+  console.log(dateFirst, dateSecond)
+
+  const [vehicle, setVehicle] = useState<string>()
+  const [location, setLocation] = useState<string>()
 
   const vehicleClassOption = [
     { id: 1, option: "Economy" },
     { id: 2, option: "Standard" },
     { id: 3, option: "Premium" },
     { id: 4, option: "Luxury" },
-  ];
+  ]
 
   return (
     <header
       header-bg="true"
-      className="h-screen text-white bg-cover bg-center "
+      className="h-screen bg-cover bg-center text-white "
     >
-      <div className="space-y-16 w-full flex justify-between items-center lg:space-y-32 py-2 md:py-6 px-2 md:px-8 lg:px-[3rem] xl:px-[8rem] h-full">
-        <Card className="w-full max-w-[27rem] flex-row mx-auto lg:mx-0">
+      <div className="flex h-full w-full items-center justify-between space-y-16 px-2 py-2 md:px-8 md:py-6 lg:space-y-32 lg:px-[3rem] xl:px-[8rem]">
+        <Card className="mx-auto w-full max-w-[27rem] flex-row lg:mx-0">
           <CardBody className="mx-auto grid gap-7">
             <div>
               <Typography variant="h6" color="gray" className="mb-4 uppercase">
@@ -59,15 +59,14 @@ export default function Header() {
                 crossOrigin={undefined}
                 onChange={(e) => setDateSecond(e.target.value)}
               />
-              <div className="border-[1px] py-[2px] border-[#B0BEC5] shadow-inner rounded-md">
+              <div className="rounded-md border-[1px] border-[#B0BEC5] py-[2px] shadow-inner">
                 <select
-                  className="bg-white w-full border-r-[14px] border-transparent py-2 px-4 text-sm rounded-md "
+                  className="w-full rounded-md border-r-[14px] border-transparent bg-white px-4 py-2 text-sm "
                   onChange={(e) => setVehicle(e.target.value)}
                 >
                   <option disabled selected hidden>
                     Vehicle variant
                   </option>
-                  <br />
                   {vehicleClassOption.map((option) => (
                     <option value={vehicle} key={option.id}>
                       {option.option}
@@ -75,9 +74,9 @@ export default function Header() {
                   ))}
                 </select>
               </div>
-              <div className="border-[1px] py-[2px] border-[#B0BEC5] shadow-inner rounded-md">
+              <div className="rounded-md border-[1px] border-[#B0BEC5] py-[2px] shadow-inner">
                 <select
-                  className="bg-white w-full border-r-[14px] border-transparent py-2 px-4 text-sm rounded-md "
+                  className="w-full rounded-md border-r-[14px] border-transparent bg-white px-4 py-2 text-sm "
                   onChange={(e) => setLocation(e.target.value)}
                 >
                   <option disabled selected hidden>
@@ -99,5 +98,5 @@ export default function Header() {
         </Card>
       </div>
     </header>
-  );
+  )
 }

@@ -1,7 +1,7 @@
 [
   {"id": 1, "name": "Child seat", "price": 19.99},
-  {"id": 1, "name": "Baby chair", "price": 16.99},
-  {"id": 1, "name": "GPS", "price": 11.99},
-  {"id": 1, "name": "Trailer", "price": 14.99},
-  {"id": 1, "name": "Roof rack", "price": 13.99}
+  {"id": 2, "name": "Baby chair", "price": 16.99},
+  {"id": 3, "name": "GPS", "price": 11.99},
+  {"id": 4, "name": "Trailer", "price": 14.99},
+  {"id": 5, "name": "Roof rack", "price": 13.99}
 ]

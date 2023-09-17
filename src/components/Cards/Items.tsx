@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import formatCurrency from "../../Utilities/FormatCurrency";
 import { useRentContext } from "../../Context/RentContext";
-import CardsBody from "./CardBody";
+import CardsBody from "./CardsBody";
 
 type carDataProps = {
   id: number;

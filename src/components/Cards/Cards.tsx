@@ -1,17 +1,17 @@
-import CarData from "../../Data/CarData.json";
-import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import formatCurrency from "../../Utilities/FormatCurrency";
-import { Typography } from "@material-tailwind/react";
-import Items from "./Items";
+import CarData from "../../Data/CarData.json"
+import { motion } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
+import formatCurrency from "../../Utilities/FormatCurrency"
+import { Typography } from "@material-tailwind/react"
+import Items from "./Items"
 
 export function Cards() {
-  const [width, setwidth] = useState(0);
-  const cardParent = useRef<any>();
+  const [width, setwidth] = useState(0)
+  const cardParent = useRef<any>()
 
   useEffect(() => {
-    setwidth(cardParent.current?.scrollWidth - cardParent.current?.offsetWidth);
-  }, []);
+    setwidth(cardParent.current?.scrollWidth - cardParent.current?.offsetWidth)
+  }, [])
 
   return (
     <main className="bg-blue-gray-50/50 pt-32">
@@ -40,17 +40,15 @@ export function Cards() {
                     className="flex gap-x-5"
                   >
                     {carDetails.carData.map((car) => (
-                      <>
-                        <Items key={car.id} {...car} />
-                      </>
+                      <Items key={car.id} {...car} />
                     ))}
                   </motion.div>
                 </motion.div>
               </div>
             </div>
-          );
+          )
         })}
       </div>
     </main>
-  );
+  )
 }

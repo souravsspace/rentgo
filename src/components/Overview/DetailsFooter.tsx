@@ -28,11 +28,12 @@ export default function DetailsFooter() {
           </Typography>
         </div>
       </section>
-      <section className="my-4 grid grid-cols-1 gap-1 md:grid-cols-3">
-        {overviewData.map((img) => (
+      <section className="my-4 grid grid-cols-2 gap-1 md:grid-cols-3">
+        {overviewData.map((img, index) => (
           <img
+            key={index}
             src={img.src}
-            className="max-w-[245px] cursor-pointer rounded-lg"
+            className="max-w-[245px] w-full cursor-pointer rounded-lg"
           />
         ))}
       </section>
@@ -47,7 +48,7 @@ export default function DetailsFooter() {
               className="flex gap-1 text-sm text-green-600"
             >
               <FontAwesomeIcon icon={faCheck} />
-              <p>{item.name}</p>
+              <Typography>{item.name}</Typography>
             </Typography>
           ))}
         </div>
