@@ -1,12 +1,12 @@
-import { TheCard } from "../components/Car/TheCard";
-import AfterHeader from "../components/Header/AfterHeader";
-import Header from "../components/Header/Header";
+import { Cards } from "../Components/Cards/Cards";
+import AfterHeader from "../Components/Header/AfterHeader";
+import Header from "../Components/Header/Header";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <TheCard />
+      <Cards />
       <AfterHeader />
     </>
   );

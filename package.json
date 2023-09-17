@@ -1,6 +1,7 @@
 {
   "name": "rentgo",
   "private": true,
+  "homepage": "https://souravsspace.github.io/rent-go/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -24,7 +24,7 @@ export default function AsideOverview({ id }: AsideOverviewProps) {
 
   if (items == null) return null;
   return (
-    <div>
+    <div className="sticky">
       <Card
         color="gray"
         variant="gradient"

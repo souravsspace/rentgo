@@ -5,7 +5,7 @@ import formatCurrency from "../../Utilities/FormatCurrency";
 import { Typography } from "@material-tailwind/react";
 import Items from "./Items";
 
-export function TheCard() {
+export function Cards() {
   const [width, setwidth] = useState(0);
   const cardParent = useRef<any>();
 
