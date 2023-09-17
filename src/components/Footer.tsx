@@ -66,7 +66,7 @@ export default function Footer() {
             variant="small"
             className="mb-4 font-normal text-white md:mb-0 px-4 md:px-12 text-center md:text-left"
           >
-            &copy; {currentYear} <a href="/">Material Tailwind</a>. All Rights
+            &copy; {currentYear} <a href="/">Sourav Ukil</a>. All Rights
             Reserved.
           </Typography>
         </div>
