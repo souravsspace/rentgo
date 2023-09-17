@@ -15,7 +15,7 @@ export function Cards() {
 
   return (
     <main className="bg-blue-gray-50/50 pt-32">
-      <Typography variant="h1" className="text-center md:mb-[5rem]">
+      <Typography variant="h2" className="text-center mb-[5rem]">
         Get Our Rental Cars
       </Typography>
       <div className="h-full px-2 py-2 md:px-8 md:py-6 lg:px-[3rem] xl:px-[8rem]">
@@ -24,7 +24,7 @@ export function Cards() {
             <div key={index} className="mb-20 grid gap-8">
               <div className="flex items-center gap-2">
                 <Typography variant="h3">{carDetails.title}</Typography>
-                <Typography>
+                <Typography className="text-green-500">
                   ( Starts at {formatCurrency(carDetails.priceStarts)}/Day)
                 </Typography>
               </div>

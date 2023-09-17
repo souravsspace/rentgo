@@ -22,7 +22,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative w-full bg-black text-white py-[3rem]">
+    <footer className="relative w-full bg-gray-900 text-white py-[3rem]">
       <div className="flex justify-between items-center md:px-8 lg:px-[3rem] xl:px-[8rem] gap-10 md:gap-0 flex-col md:flex-row">
         <section className="grid gap-8">
           <div>
@@ -35,7 +35,7 @@ export default function Footer() {
                 <ul className="list-none p-0 m-0 grid gap-1">
                   {navItem.items.map((item) => (
                     <li key={item}>
-                      <Typography>{item}</Typography>
+                      <Typography className="cursor-pointer">{item}</Typography>
                     </li>
                   ))}
                 </ul>
@@ -45,8 +45,8 @@ export default function Footer() {
         </section>
         <section className="grid gap-4">
           <Typography>Daily from 09:00 - 21:00</Typography>
-          <Typography variant="h3">+1 808 203 4565</Typography>
-          <Typography variant="h5">mail: youremail@example.com</Typography>
+          <Typography variant="h4">+1 808 203 4565</Typography>
+          <Typography variant="h5">Email: our_email@example.com</Typography>
           <div className="flex gap-4">
             <IconButton className="rounded bg-[#ea4335] text-2xl hover:shadow-[#ea4335]/20 focus:shadow-[#ea4335]/20 active:shadow-[#ea4335]/10">
               <FontAwesomeIcon icon={faFacebook} />

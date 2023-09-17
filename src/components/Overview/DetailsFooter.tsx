@@ -45,7 +45,7 @@ export default function DetailsFooter() {
           {followingdata.map((item, index) => (
             <Typography
               key={index}
-              className="flex gap-1 text-sm text-green-600"
+              className="flex items-center gap-1 text-sm text-green-600"
             >
               <FontAwesomeIcon icon={faCheck} />
               <Typography>{item.name}</Typography>

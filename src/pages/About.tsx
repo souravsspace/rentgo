@@ -10,7 +10,7 @@ import {
 
 export default function About() {
   return (
-    <main className="m-[8rem] flex items-center justify-center">
+    <main className="my-[8rem] mx-4 md:px-4 lg:px-8 flex items-center justify-center">
       <div className="w-[32rem]">
         <Timeline>
           <TimelineItem>

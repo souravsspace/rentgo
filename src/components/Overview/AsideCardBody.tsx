@@ -22,7 +22,7 @@ export default function AsideCardBody({ rent }: AsideCardBodyProps) {
   return (
     <>
       <CardBody className="p-0">
-        <div className="py-4 grid gap-2 w-[20rem]">
+        <div className="py-4 grid gap-2 md:w-[20rem]">
           <Input 
             color="white"
             label="Starting Date"
