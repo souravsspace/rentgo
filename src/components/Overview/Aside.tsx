@@ -1,14 +1,13 @@
-import carDataRaw from "../../Data/carDataRaw.json"
-
 import { Card, CardHeader, Typography } from "@material-tailwind/react"
 import AsideCardBody from "./AsideCardBody"
+import CarDataRaw from "../../Data/CarDataRaw.json"
 
 type AsideOverviewProps = {
   id: number
 }
 
 export default function AsideOverview({ id }: AsideOverviewProps) {
-  const items = carDataRaw.find((item) => item.id === id)
+  const items = CarDataRaw.find((item) => item.id === id)
   if (items == null) return null
   return (
     <div>
@@ -36,7 +35,7 @@ export default function AsideOverview({ id }: AsideOverviewProps) {
             className="mt-6 flex justify-center gap-1 text-7xl font-normal"
           >
             <span className="mt-2 text-4xl">$</span>
-            {items.rent} <span className="self-end text-4xl">/mo</span>
+            {items.rent} <span className="self-end text-4xl">/Day</span>
           </Typography>
         </CardHeader>
         <AsideCardBody {...items} />

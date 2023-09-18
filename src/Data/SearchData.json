@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Body Type",
+    "items": ["Crossover", "Hatchback", "Minivan", "Sedan"]
+  },
+  {
+    "id": 2,
+    "title": "Fuel Types",
+    "items": ["Gazoline", "Diesel", "Biodiesel", "CNG", "Electricity"]
+  },
+  { "id": 3, "title": "Transmission", "items": ["Manual", "Automatic"] },
+  { "id": 3, "title": "Drivetrain", "items": ["AWD", "FWD", "RWD", "4WD"] }
+]

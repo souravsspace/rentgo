@@ -1,5 +1,5 @@
 import { Typography } from "@material-tailwind/react"
-import carDataRaw from "../../Data/carDataRaw.json"
+import carDataRaw from "../../Data/CarDataRaw.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faArrowLeft,
