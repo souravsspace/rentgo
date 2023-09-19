@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "Economy",
     "priceStarts": 20,
     "carData": [
@@ -196,6 +197,7 @@
     ]
   },
   {
+    "id": 2,
     "title": "Standard",
     "priceStarts": 30,
     "carData": [
@@ -392,6 +394,7 @@
     ]
   },
   {
+    "id": 3,
     "title": "Premimum",
     "priceStarts": 40,
     "carData": [
@@ -588,6 +591,7 @@
     ]
   },
   {
+    "id": 4,
     "title": "Luxury",
     "priceStarts": 300,
     "carData": [
@@ -784,4 +788,3 @@
     ]
   }
 ]
-

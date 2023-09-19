@@ -13,6 +13,12 @@ type RentContextProps = {
   getCarDetails: (id: number) => void
   formSubmit: (e: React.FormEvent<HTMLFormElement>) => void
   HandleChecked: (e: React.ChangeEvent<HTMLInputElement>, rate: number) => void
+  open: boolean
+  openDrawer: () => void
+  closeDrawer: () => void
+  showResult: (id: number) => void
+  carId: number
+  carIdLast: number
 }
 
 type showCarType = {
@@ -30,6 +36,34 @@ export default function RentContextProvider({
   const [showCar, setShowCar] = useState<showCarType[]>([])
   const [isChecked, setIsChecked] = useState<any>(false)
   const [thePrice, setThePrice] = useState(0)
+
+  const [open, setOpen] = useState(false)
+
+  const openDrawer = () => setOpen(true)
+  const closeDrawer = () => setOpen(false)
+
+  const [carId, setCarId] = useState(0)
+  const [carIdLast, setCarIdLast] = useState(10)
+
+  function showResult(id: number) {
+    if (id === 1) {
+      setCarId(0)
+      setCarIdLast(10)
+    }
+    if (id === 2) {
+      setCarId(11)
+      setCarIdLast(20)
+    }
+    if (id === 3) {
+      setCarId(21)
+      setCarIdLast(30)
+    }
+    if (id === 4) {
+      setCarId(31)
+      setCarIdLast(40)
+    }
+    if (id == null) return null
+  }
 
   const HandleChecked = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -68,6 +102,12 @@ export default function RentContextProvider({
         HandleChecked,
         isChecked,
         thePrice,
+        openDrawer,
+        closeDrawer,
+        open,
+        showResult,
+        carId,
+        carIdLast,
       }}
     >
       {children}

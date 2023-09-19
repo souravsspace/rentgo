@@ -29,7 +29,7 @@ export default function AsideBody() {
             </div>
           ))}
         </section>
-        <section>
+        <section className="hidden lg:block">
           <AsideSlider />
         </section>
       </div>
