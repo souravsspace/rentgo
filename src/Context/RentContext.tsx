@@ -19,6 +19,16 @@ type RentContextProps = {
   showResult: (id: number) => void
   carId: number
   carIdLast: number
+  vehicle: string
+  location: string
+  setVehicle: (value: string) => void
+  setLocation: (value: string) => void
+  dateFormatFrist: (date: Date) => void
+  dateFormatSecond: (date: Date) => void
+  dateFirst: any
+  dateSecond: any
+  handleSearch: () => void
+  forSearch: boolean
 }
 
 type showCarType = {
@@ -44,6 +54,29 @@ export default function RentContextProvider({
 
   const [carId, setCarId] = useState(0)
   const [carIdLast, setCarIdLast] = useState(10)
+
+  const [vehicle, setVehicle] = useState("")
+  const [location, setLocation] = useState("")
+
+  const [dateFirst, setDateFirst] = useState<any>()
+  const [dateSecond, setDateSecond] = useState<any>()
+
+  const [forSearch, setForSearch] = useState(false)
+
+  function dateFormatFrist(date: Date) {
+    setDateFirst(date.toISOString().slice(0, 10))
+  }
+
+  function dateFormatSecond(date: Date) {
+    setDateSecond(date.toISOString().slice(0, 10))
+  }
+
+  // function daysDifference(date1: Date, date2: Date) {
+  //   const Difference_In_Time = date2.getTime() - date1.getTime()
+  //   const Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24)
+  //   // return Difference_In_Days
+  // }
+  // daysDifference(new Date("2022-11-11"), new Date("2022-12-12"))
 
   function showResult(id: number) {
     if (id === 1) {
@@ -93,9 +126,22 @@ export default function RentContextProvider({
     navigate("/search-result")
   }
 
+  function handleSearch() {
+    setForSearch(true)
+  }
+
   return (
     <RentContext.Provider
       value={{
+        forSearch,
+        vehicle,
+        location,
+        setVehicle,
+        setLocation,
+        dateFirst,
+        dateSecond,
+        dateFormatFrist,
+        dateFormatSecond,
         formSubmit,
         showCar,
         getCarDetails,
@@ -108,6 +154,7 @@ export default function RentContextProvider({
         showResult,
         carId,
         carIdLast,
+        handleSearch,
       }}
     >
       {children}

@@ -6,16 +6,10 @@ import {
   Input,
 } from "@material-tailwind/react"
 import { useRentContext } from "../../Context/RentContext"
-import { useState } from "react"
 import SelectOptions from "./SelectOptions"
 
 export default function Header() {
-  const { formSubmit } = useRentContext()
-
-  const [dateFirst, setDateFirst] = useState<string>()
-  const [dateSecond, setDateSecond] = useState<string>()
-
-  console.log(dateFirst, dateSecond)
+  const { formSubmit, dateFormatFrist, dateFormatSecond } = useRentContext()
   return (
     <header
       header-bg="true"
@@ -39,14 +33,14 @@ export default function Header() {
                 type="date"
                 placeholder="insert date"
                 crossOrigin={undefined}
-                onChange={(e) => setDateFirst(e.target.value)}
+                onChange={(e) => dateFormatFrist(new Date(e.target.value))}
               />
               <Input
                 label="To"
                 type="date"
                 placeholder="insert date"
                 crossOrigin={undefined}
-                onChange={(e) => setDateSecond(e.target.value)}
+                onChange={(e) => dateFormatSecond(new Date(e.target.value))}
               />
               <SelectOptions />
               <Button type="submit" fullWidth>

@@ -6,17 +6,21 @@ import {
   Typography,
 } from "@material-tailwind/react"
 import { useRentContext } from "../../Context/RentContext"
-import { useState } from "react"
 import SelectOptions from "../Header/SelectOptions"
 import AsideBody from "./AsideBody"
 
 export default function Aside() {
-  const { formSubmit, closeDrawer } = useRentContext()
-
-  const [dateFirst, setDateFirst] = useState<string>()
-  const [dateSecond, setDateSecond] = useState<string>()
-
-  console.log(dateFirst, dateSecond)
+  const {
+    formSubmit,
+    closeDrawer,
+    vehicle,
+    location,
+    dateFirst,
+    dateSecond,
+    dateFormatSecond,
+    dateFormatFrist,
+    handleSearch,
+  } = useRentContext()
 
   return (
     <main>
@@ -24,11 +28,17 @@ export default function Aside() {
         <section>
           <Card className="mx-auto w-full max-w-[24rem] flex-row pb-8 pt-6 lg:mx-0 lg:max-w-[30rem]">
             <CardBody className="mx-auto grid gap-7">
-              <div className="flex justify-between items-center">
+              <div className="flex items-center justify-between">
                 <Typography variant="h3" color="blue-gray" className="md:mb-2">
                   Quick Search
                 </Typography>
-                <Typography variant="h4" onClick={closeDrawer} className="md:hidden block cursor-pointer">&#10005;</Typography>
+                <Typography
+                  variant="h4"
+                  onClick={closeDrawer}
+                  className="block cursor-pointer md:hidden"
+                >
+                  &#10005;
+                </Typography>
               </div>
 
               <form onSubmit={(e) => formSubmit(e)} className="grid gap-y-5">
@@ -38,18 +48,20 @@ export default function Aside() {
                     type="date"
                     placeholder="insert date"
                     crossOrigin={undefined}
-                    onChange={(e) => setDateFirst(e.target.value)}
+                    value={dateFirst}
+                    onChange={(e) => dateFormatFrist(new Date(e.target.value))}
                   />
                   <Input
                     label="To"
                     type="date"
                     placeholder="insert date"
                     crossOrigin={undefined}
-                    onChange={(e) => setDateSecond(e.target.value)}
+                    value={dateSecond}
+                    onChange={(e) => dateFormatSecond(new Date(e.target.value))}
                   />
                 </div>
-                <SelectOptions />
-                <Button type="submit" fullWidth>
+                <SelectOptions vehicle={vehicle} location={location} />
+                <Button type="submit" fullWidth onClick={handleSearch}>
                   Search
                 </Button>
               </form>

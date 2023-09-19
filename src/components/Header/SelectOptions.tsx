@@ -1,16 +1,24 @@
-import { useState } from "react"
+import { useRentContext } from "../../Context/RentContext"
 import locationOption from "../../Data/locationOp.json"
 
-export default function SelectOptions() {
-  const [vehicle, setVehicle] = useState<string>()
-  const [location, setLocation] = useState<string>()
+type SelectOptionsProps = {
+  vehicle?: string
+  location?: string
+}
+
+export default function SelectOptions({
+  vehicle,
+  location,
+}: SelectOptionsProps) {
+  const { setVehicle, setLocation } = useRentContext()
+
   const vehicleClassOption = [
     { id: 1, option: "Economy" },
     { id: 2, option: "Standard" },
     { id: 3, option: "Premium" },
     { id: 4, option: "Luxury" },
   ]
-  
+
   return (
     <div className="grid grid-cols-2 gap-2">
       <div className="rounded-md border-[1px] border-[#B0BEC5] py-[2px] shadow-inner">
@@ -19,12 +27,10 @@ export default function SelectOptions() {
           onChange={(e) => setVehicle(e.target.value)}
         >
           <option disabled selected hidden>
-            Vehicle variant
+            {vehicle ? vehicle : "Vehicle variant"}
           </option>
           {vehicleClassOption.map((option) => (
-            <option value={vehicle} key={option.id}>
-              {option.option}
-            </option>
+            <option key={option.id}>{option.option}</option>
           ))}
         </select>
       </div>
@@ -34,12 +40,10 @@ export default function SelectOptions() {
           onChange={(e) => setLocation(e.target.value)}
         >
           <option disabled selected hidden>
-            Location
+            {location ? location : "Location"}
           </option>
           {locationOption.map((option) => (
-            <option value={location} key={option.id}>
-              {option.option}
-            </option>
+            <option key={option.id}>{option.option}</option>
           ))}
         </select>
       </div>
